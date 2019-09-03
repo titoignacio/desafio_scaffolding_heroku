@@ -1,0 +1,26 @@
+<h1>Landing</h1>
+
+
+
+<table class='table'>
+  <thead>
+    <tr>
+    <th>name</th>
+    <th>age</th>
+    <th>e-mail</th>
+    <th colpan="3"></th>
+</tr>
+  </thead>
+
+
+<tbody>
+    <% @students.each do |student| %>
+<tr>
+        <td> <%= student.name %></td>
+        <td> <%= student.age %></td>
+      <td>  <%= student.email %> </td>
+
+    <% end %>
+
+</tbody>
+</table>
