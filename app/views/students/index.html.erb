@@ -2,18 +2,31 @@
 
 <h1>Students</h1>
 
+<table class='table'>
+  <thead>
+    <tr>
+    <th>name</th>
+    <th>age</th>
+    <th>e-mail</th>
+    <th colpan="3"></th>
+</tr>
+  </thead>
 
 
+<tbody>
     <% @students.each do |student| %>
-
-        <%= student.name %>
-        <%= student.age %>
-      <%= link_to 'Show', student, class:'btn btn-success' %>
-      <%= link_to 'Edit', edit_student_path(student), class: 'btn btn-info' %>
-      <%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-warning' %>
-
+<tr>
+        <td> <%= student.name %></td>
+        <td> <%= student.age %></td>
+      <td>  <%= student.email %> </td>
+    <td>  <%= link_to 'Show', student, class:'btn btn-success' %> </td>
+    <td>  <%= link_to 'Edit', edit_student_path(student), class: 'btn btn-info' %> </td>
+    <td>  <%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-warning' %> </td>
+</tr>
     <% end %>
 
+</tbody>
+</table>
 
 <br>
 
